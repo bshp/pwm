@@ -33,8 +33,12 @@ body {
     padding-top:25px;
 }
 
+h2 {
+    padding-top: 10px;
+}
+
 #wrapper {
-	margin-top: 2%;
+    margin-top: 2%;
 }
 
 #centerbody {
@@ -52,10 +56,6 @@ body {
     border-radius: 5px;
     padding-bottom: 5px;
     padding-top: 25px;
-}
-
-h2 {
-    padding-top: 10px;
 }
 
 #header {
@@ -86,6 +86,57 @@ h2 {
     width: 100px;
     height: 0px;
     padding-top: 0px;
+}
+
+.header-button {
+    background: none !important;
+}
+
+.headerHome {
+    position: absolute;
+    text-align:right;
+    border-width:0;
+    top: 25px;
+    right:50px;
+    height: 20px;
+    background-image: url('home.png') !important;
+    background-repeat: no-repeat;
+    width: 20px;
+    cursor: pointer;
+}
+
+.headerLogout {
+    position: absolute;
+    text-align: right;
+    border-width: 0;
+    top: 25px;
+    right: 15px;
+    height: 20px;
+    background-image: url('logout.png') !important;
+    background-repeat: no-repeat;
+    width: 20px;
+    cursor: pointer;
+}
+
+#header-company-logo{
+    background-image:url('shpidmLogo.png');
+    background-repeat: no-repeat;
+    width: 450px;
+    height: 55px;
+    margin-left: 2%;
+    margin-right: auto;
+}
+
+#header-page {
+    display: none;
+}
+
+#header-title {
+    display: none;
+}
+
+#header-warning {
+    background-color: #ebeca6;
 }
 
 #HomeButton span.pwm-icon, #LogoutButton span.pwm-icon {
@@ -121,57 +172,6 @@ h2 {
 
 .menubutton:hover {
      background: #393d3e;
-}
- 
-.header-button {
-	background: none !important;
-}
-
-.headerHome {
-	position: absolute;
-	text-align:right;
-	border-width:0;
-	top: 25px;
-	right:50px;
-	height: 20px;
-	background-image: url('home.png') !important;
-	background-repeat: no-repeat;
-	width: 20px;
-	cursor: pointer;
-}
-
-.headerLogout {
-	position: absolute;
-	text-align: right;
-	border-width: 0;
-	top: 25px;
-	right: 15px;
-	height: 20px;
-	background-image: url('logout.png') !important;
-	background-repeat: no-repeat;
-	width: 20px;
-	cursor: pointer;
-}
-
-#header-company-logo{
-    background-image:url('shpidmLogo.png');
-    background-repeat: no-repeat;
-    width: 450px;
-    height: 55px;
-	margin-left: 2%;
-	margin-right: auto;
-}
-
-#header-page {
-	display: none;
-}
-
-#header-title {
-	display: none;
-}
-
-#header-warning {
-    background-color: #ebeca6;
 }
 
 .btn {
@@ -218,4 +218,8 @@ h2 {
 
 .message-success {
     background-color: #8096ab;
+}
+
+table td {
+    padding: 0;
 }
