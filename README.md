@@ -1,5 +1,10 @@
 # PWM
 
+[![Build Status](https://travis-ci.org/bshp/pwm.svg?branch=master)](https://travis-ci.org/bshp/pwm)
+
+- This version has been customized for BSHP, no icons for shortcuts, back to tables in main menu.
+- Tested and built locally with Jdk 1.8.0_144, check Travis CI for version information.
+
 PWM is an open source password self service application for LDAP directories. PWM is an ideal candidate for organizations that wish to “roll their own” password self service solution, but do not wish to start from scratch. [Overview/Screenshots](https://docs.google.com/presentation/d/1LxDXV_iiToJXAzzT9mc1xXO0atVObmRpCame6qXOyxM/pub?slide=id.p8)
 
 Official project page is at [https://github.com/pwm-project/pwm/](https://github.com/pwm-project/pwm/).
