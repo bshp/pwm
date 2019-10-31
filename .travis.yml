@@ -3,7 +3,7 @@ dist: trusty
 language: java
 branches:
   only:
-    - master
+    - bshp/master
 
 install: true
 cache:
