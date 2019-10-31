@@ -35,7 +35,7 @@
 <pwm:if test="<%=PwmIfTest.authenticated%>"><title><pwm:display key="Title_TitleBarAuthenticated"/></title></pwm:if>
 <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
 <meta name="robots" content="noindex,nofollow"/>
-<meta id="application-info" name="application-name" content="<%=PwmConstants.PWM_APP_NAME%> Password Self Service"
+<meta id="application-info" name="application-name" content="<%=PwmConstants.PWM_APP_NAME%> Password Manager"
       <pwm:if test="<%=PwmIfTest.showVersionHeader%>">data-<%=PwmConstants.PWM_APP_NAME.toLowerCase()%>-version="<%=PwmConstants.BUILD_VERSION%>" data-<%=PwmConstants.PWM_APP_NAME.toLowerCase()%>-build="<%=PwmConstants.BUILD_NUMBER%>"</pwm:if>
       data-<%=PwmConstants.PWM_APP_NAME.toLowerCase()%>-instance="<pwm:value name="<%=PwmValue.instanceID%>"/>"
       data-session-id="<pwm:value name="<%=PwmValue.sessionID%>"/>"
@@ -47,6 +47,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8; IE=7" />
 <link rel="icon" type="image/png" href="<pwm:url url='/public/resources/favicon.png' addContext="true"/>"/>
 <link rel="stylesheet" type="text/css" href="<pwm:url url='/public/resources/pwm-icons.css' addContext="true"/>"/>
+<link rel='stylesheet' type='text/css' href="<pwm:url url='/public/resources/font-ubuntu.css' addContext="true"/>"/>
 <link href="<pwm:url url='/public/resources/style.css' addContext="true"/>" rel="stylesheet" type="text/css" media="screen"/>
 <link href="<pwm:url url='/public/resources/style-print.css' addContext="true"/>" rel="stylesheet" type="text/css" media="print"/>
 <link href="<pwm:url url="%THEME_URL%"/>" rel="stylesheet" type="text/css" media="screen"/>
