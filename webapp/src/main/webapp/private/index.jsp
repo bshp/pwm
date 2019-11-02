@@ -37,175 +37,175 @@
     </jsp:include>
 
     <div id="centerbody">
-        <table class="noborder">
+        <div class="container">
         <pwm:if test="<%=PwmIfTest.endUserFunctionalityAvailable%>" negate="true">
             <p><pwm:display key="Warning_NoEndUserModules" bundle="Config"/></p>
             <br/>
         </pwm:if>
         <pwm:if test="<%=PwmIfTest.endUserFunctionalityAvailable%>">
             <pwm:if test="<%=PwmIfTest.permission%>" permission="<%=Permission.CHANGE_PASSWORD%>">
-                <tr>
-                    <td class="menubutton_key">
+                <div class="row">
+                    <div class="col-sm-4 menubutton_key">
                         <a id="button_ChangePassword" class="menubutton" href="<pwm:url addContext="true" url='<%=PwmServletDefinition.PrivateChangePassword.servletUrl()%>'/>">
                             <pwm:display key="Title_ChangePassword"/>
                         </a>
-                    </td>
-                    <td>
+                    </div>
+                    <div class="col-sm-8">
                         <p><pwm:display key="Long_Title_ChangePassword"/></p>
-                    </td>
-                </tr>
+                    </div>
+                </div>
             </pwm:if>
 
             <pwm:if test="<%=PwmIfTest.peopleSearchEnabled%>">
                 <pwm:if test="<%=PwmIfTest.permission%>" permission="<%=Permission.PEOPLE_SEARCH%>">
-                    <tr>
-                        <td class="menubutton_key">
+                    <div class="row">
+                        <div class="col-sm-4 menubutton_key">
                             <a id="button_PeopleSearch" class="menubutton" href="<pwm:url addContext="true" url='<%=PwmServletDefinition.PrivatePeopleSearch.servletUrl()%>'/>#/search">
                                 <pwm:display key="Title_PeopleSearch"/>
                             </a>
-                        </td>
-                        <td>
+                        </div>
+                        <div class="col-sm-8">
                             <p><pwm:display key="Long_Title_PeopleSearch"/></p>
-                        </td>
-                    </tr>
+                        </div>
+                    </div>
                 </pwm:if>
             </pwm:if>
 
             <pwm:if test="<%=PwmIfTest.orgChartEnabled%>">
                 <pwm:if test="<%=PwmIfTest.permission%>" permission="<%=Permission.PEOPLE_SEARCH%>">
-                    <tr>
-                        <td class="menubutton_key">
-                            <a id="button_PeopleSearch" class="menubutton" href="<pwm:url addContext="true" url='<%=PwmServletDefinition.PrivatePeopleSearch.servletUrl()%>'/>#/orgchart">
+                    <div class="row">
+                        <div class="col-sm-4 menubutton_key">
+                            <a id="button_OrgChart" class="menubutton" href="<pwm:url addContext="true" url='<%=PwmServletDefinition.PrivatePeopleSearch.servletUrl()%>'/>#/orgchart">
                                 <pwm:display key="Title_OrgChart"/>
                             </a>
-                        </td>
-                        <td>
+                        </div>
+                        <div class="col-sm-8">
                             <p><pwm:display key="Title_OrgChart"/></p>
-                        </td>
-                    </tr>
+                        </div>
+                    </div>
                 </pwm:if>
             </pwm:if>
 
             <pwm:if test="<%=PwmIfTest.setupChallengeEnabled%>">
                 <pwm:if test="<%=PwmIfTest.permission%>" permission="<%=Permission.SETUP_RESPONSE%>">
-                    <tr>
-                        <td class="menubutton_key">
+                    <div class="row">
+                        <div class="col-sm-4 menubutton_key">
                             <a id="button_SetupResponses" class="menubutton" href="<pwm:url addContext="true" url='<%=PwmServletDefinition.SetupResponses.servletUrl()%>'/>">
                                 <pwm:display key="Title_SetupResponses"/>
                             </a>
-                        </td>
-                        <td>
+                        </div>
+                        <div class="col-sm-8">
                             <p><pwm:display key="Long_Title_SetupResponses"/></p>
-                        </td>
-                    </tr>
+                        </div>
+                    </div>
                 </pwm:if>
             </pwm:if>
 
             <pwm:if test="<%=PwmIfTest.otpSetupEnabled%>">
-                <tr>
-                    <td class="menubutton_key">
+                <div class="row">
+                    <div class="col-sm-4 menubutton_key">
                         <a id="button_SetupOtpSecret" class="menubutton" href="<pwm:url addContext="true" url='<%=PwmServletDefinition.SetupOtp.servletUrl()%>'/>">
                             <pwm:display key="Title_SetupOtpSecret"/>
                         </a>
-                    </td>
-                    <td>
+                    </div>
+                    <div class="col-sm-8">
                         <p><pwm:display key="Long_Title_SetupOtpSecret"/></p>
-                    </td>
-                </tr>
+                    </div>
+                </div>
             </pwm:if>
 
             <pwm:if test="<%=PwmIfTest.updateProfileAvailable%>">
-                <tr>
-                    <td class="menubutton_key">
+                <div class="row">
+                    <div class="col-sm-4 menubutton_key">
                         <a id="button_UpdateProfile" class="menubutton" href="<pwm:url addContext="true" url='<%=PwmServletDefinition.UpdateProfile.servletUrl()%>'/>">
                             <pwm:display key="Title_UpdateProfile"/>
                         </a>
-                    </td>
-                    <td>
+                    </div>
+                    <div class="col-sm-8">
                         <p><pwm:display key="Long_Title_UpdateProfile"/></p>
-                    </td>
-                </tr>
+                    </div>
+                </div>
             </pwm:if>
 
             <pwm:if test="<%=PwmIfTest.shortcutsEnabled%>">
-                <tr>
-                    <td class="menubutton_key">
+            <div class="row">
+                <div class="col-sm-4 menubutton_key">
                         <a id="button_Shortcuts" class="menubutton" href="<pwm:url addContext="true" url='<%=PwmServletDefinition.Shortcuts.servletUrl()%>'/>">
                             <pwm:display key="Title_Shortcuts"/>
                         </a>
-                    </td>
-                    <td>
+                    </div>
+                    <div class="col-sm-8">
                         <p><pwm:display key="Long_Title_Shortcuts"/></p>
-                    </td>
-                </tr>
+                    </div>
+                </div>
             </pwm:if>
 
             <pwm:if test="<%=PwmIfTest.accountInfoEnabled%>">
-                <tr>
-                    <td class="menubutton_key">
+            <div class="row">
+                <div class="col-sm-4 menubutton_key">
                         <a id="button_UserInformation" class="menubutton" href="<pwm:url addContext="true" url='<%=PwmServletDefinition.AccountInformation.servletUrl()%>'/>">
                             <pwm:display key="Title_UserInformation"/>
                         </a>
-                    </td>
-                    <td>
+                    </div>
+                    <div class="col-sm-8">
                         <p><pwm:display key="Long_Title_UserInformation"/></p>
-                    </td>
-                </tr>
+                    </div>
+                </div>
             </pwm:if>
 
             <pwm:if test="<%=PwmIfTest.helpdeskAvailable%>">
-                <tr>
-                    <td class="menubutton_key">
+            <div class="row">
+                <div class="col-sm-4 menubutton_key">
                         <a id="button_Helpdesk" class="menubutton" href="<pwm:url addContext="true" url='<%=PwmServletDefinition.Helpdesk.servletUrl()%>'/>">
                             <pwm:display key="Title_Helpdesk"/>
                         </a>
-                    </td>
-                    <td>
+                    </div>
+                    <div class="col-sm-8">
                         <p><pwm:display key="Long_Title_Helpdesk"/></p>
-                    </td>
-                </tr>
+                    </div>
+                </div>
             </pwm:if>
 
 
             <pwm:if test="<%=PwmIfTest.DeleteAccountAvailable%>">
-                <tr>
-                    <td class="menubutton_key">
-                        <a id="button_Helpdesk" class="menubutton" href="<pwm:url addContext="true" url='<%=PwmServletDefinition.SelfDelete.servletUrl()%>'/>">
+            <div class="row">
+                <div class="col-sm-4 menubutton_key">
+                        <a id="button_DeleteAccount" class="menubutton" href="<pwm:url addContext="true" url='<%=PwmServletDefinition.SelfDelete.servletUrl()%>'/>">
                             <pwm:display key="Title_DeleteAccount"/>
                         </a>
-                    </td>
-                    <td>
+                    </div>
+                    <div class="col-sm-8">
                         <p><pwm:display key="Long_Title_DeleteAccount"/></p>
-                    </td>
-                </tr>
+                    </div>
+                </div>
             </pwm:if>
 
             <pwm:if test="<%=PwmIfTest.guestRegistrationAvailable%>">
-                <tr>
-                    <td class="menubutton_key">
+                <div class="row">
+                    <div class="col-sm-4 menubutton_key">
                         <a id="button_GuestRegistration" class="menubutton" href="<pwm:url url='<%=PwmServletDefinition.GuestRegistration.servletUrl()%>' addContext="true"/>">
                             <pwm:display key="Title_GuestRegistration"/>
                         </a>
-                    </td>
-                    <td>
+                    </div>
+                    <div class="col-sm-8">
                         <p><pwm:display key="Long_Title_GuestRegistration"/></p>
-                    </td>
-                </tr>
+                    </div>
+                </div>
             </pwm:if>
         </pwm:if>
         <pwm:if test="<%=PwmIfTest.permission%>" permission="<%=Permission.PWMADMIN%>">
-            <tr>
-                <td class="menubutton_key">
+            <div class="row">
+                <div class="col-sm-4 menubutton_key">
                     <a id="button_Admin" class="menubutton" href="<pwm:url url='<%=PwmServletDefinition.Admin.servletUrl()%>' addContext="true"/> ">
                             <pwm:display key="Title_Admin"/>
                     </a>
-                </td>
-                <td>
+                </div>
+                <div class="col-sm-8">
                     <p><pwm:display key="Long_Title_Admin"/></p>
-                </td>
-            </tr>
+                </div>
+            </div>
         </pwm:if>
-        </table>
+        </div>
     </div>
     <div class="push"></div>
 </div>

@@ -33,6 +33,33 @@ body {
     padding-top:25px;
 }
 
+*, ::after, ::before {
+    box-sizing: content-box;
+}
+
+.row {
+    width: 100%;
+    flex-wrap: inherit;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.col-sm-4 {
+    flex: inherit;
+    padding-right: 0;
+}
+
+.col-sm-8 {
+    flex: inherit;
+}
+
 h2 {
     padding-top: 10px;
 }
@@ -165,13 +192,13 @@ h2 {
     border: 1px solid black;
     margin: 5px 2px;
     text-decoration: none;
-    color: white;
+    color: white !important;
     background: #777777;
     box-shadow: 2px 2px 5px #aaaaaa;
 }
 
 .menubutton:hover {
-     background: #393d3e;
+    background: #393d3e;
 }
 
 .btn {
@@ -183,16 +210,16 @@ h2 {
 }
 
 .btn:hover {
-     background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #8096ab), color-stop(1, #374f69) );
-     background:linear-gradient(to bottom, #8096ab 5%, #374f69 100% );
-     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8096ab', endColorstr='#374f69');
- }
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #8096ab), color-stop(1, #374f69) );
+    background:linear-gradient(to bottom, #8096ab 5%, #374f69 100% );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8096ab', endColorstr='#374f69');
+}
 
 .btn:disabled {
-      color: #656565;
-      background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #50667b), color-stop(1, #172f49) );
-      background:linear-gradient(to bottom, #50667b 5%, #172f49 100% );
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#50667b', endColorstr='#172f49');
+    color: #656565;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #50667b), color-stop(1, #172f49) );
+    background:linear-gradient(to bottom, #50667b 5%, #172f49 100% );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#50667b', endColorstr='#172f49');
 }
 
 #login .buttonbar #submitBtn {
