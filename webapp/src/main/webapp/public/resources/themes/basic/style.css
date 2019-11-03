@@ -73,13 +73,12 @@ h2 {
 }
 
 #centerbody {
-    background: #fafafa;
+    background: #ffffff;
     width: 540px;
-    -webkit-box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, .25);
-    -moz-box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, .25);
-    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, .25);
+    -webkit-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .25);
+    -moz-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .25);
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .25);
     margin-top: -10px;
-    background-color: #ffffff;
     border-width: 5px;
     border-color: #bfbbb7;
     -moz-border-radius: 5px;
@@ -89,13 +88,21 @@ h2 {
     padding-top: 25px;
 }
 
+#centerbody #recovery {
+    margin-left: 15px;
+}
+
+#recovery .menubutton {
+    margin: 5px 0;
+}
+
 #header {
     moz-border-radius-topleft: 5px;
     moz-border-radius-topright: 5px;
     moz-border-radius-bottomright: 0px;
     moz-border-radius-bottomleft: 0px;
     webkit-border-radius: 5px 5px 0px 0px;
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 5px 5px 0 0;
     background-image: url('gradient.png');
     background-repeat:repeat-x;
     width: 550px;
@@ -115,8 +122,8 @@ h2 {
 #header-center-right {
     float: right;
     width: 100px;
-    height: 0px;
-    padding-top: 0px;
+    height: 0;
+    padding-top: 0;
 }
 
 .header-button {
@@ -228,12 +235,29 @@ h2 {
 
 #login .buttonbar #submitBtn {
     margin: 0;
-    width: auto;
-    height: auto;
-    min-width: 80px;
-    padding: 5px 10px;
-    font-size: 14px;
-    border: none;
+    padding: 0 5px;
+    font-weight: normal;
+    font-size: 1.25em;
+    height: 30px;
+    width: 125px;
+    cursor: pointer;
+    color: #fff;
+    background: #285684;
+    border: 1px solid #21476d;
+}
+
+#login .buttonbar #submitBtn:hover {
+    background: #336699;
+}
+
+.btn-submit {
+    border: 0;
+    padding: 0 5px;
+    font-weight: normal;
+    font-size: 1.25em;
+    height: 30px;
+    width: 125px;
+    cursor: pointer;
 }
 
 .message-info {
