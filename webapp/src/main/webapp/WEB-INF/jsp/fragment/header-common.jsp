@@ -50,7 +50,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8; IE=7" />
 <link rel="icon" type="image/png" href="<pwm:url url='/public/resources/favicon.png' addContext="true"/>"/>
 <link rel="stylesheet" type="text/css" href="<pwm:url url='/public/resources/pwm-icons.css' addContext="true"/>"/>
-<link rel='stylesheet' type='text/css' href="<pwm:url url='/public/resources/font-ubuntu.css' addContext="true"/>"/>
+<link rel='stylesheet' type='text/css' href="<pwm:url url='//fonts.googleapis.com/css?family=Ubuntu' addContext="true"/>"/>
 <link rel="stylesheet" type="text/css" href="<pwm:url url='/public/resources/bootstrap.min.css' addContext="true"/>" media="screen"/>
 <link rel="stylesheet" type="text/css" href="<pwm:url url='/public/resources/style.css' addContext="true"/>" media="screen"/>
 <link rel="stylesheet" type="text/css" href="<pwm:url url='/public/resources/style-print.css' addContext="true"/>" media="print"/>
