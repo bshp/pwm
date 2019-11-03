@@ -59,13 +59,9 @@ a:hover {
     text-decoration: none;
 }
 
-.col-sm-4 {
+.col-sm-4, .col-sm-8 {
     flex: inherit;
     padding-right: 0;
-}
-
-.col-sm-8 {
-    flex: inherit;
 }
 
 h2 {
