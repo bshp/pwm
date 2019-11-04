@@ -31,7 +31,7 @@
     <properties>
         <build.number>3</build.number>
         <build.revision>${git.commit.id.abbrev}</build.revision>
-        <warArtifactID>pwm-${project.version}_${build.number}.war</warArtifactID>
+        <warArtifactID>pwm-${project.version}.war</warArtifactID>
         <dockerImageTag>pwm/pwm-webapp</dockerImageTag>
         <timestamp.iso>${maven.build.timestamp}</timestamp.iso>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
