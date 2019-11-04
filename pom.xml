@@ -29,15 +29,15 @@
     </scm>
 
     <properties>
-        <warArtifactID>pwm-${project.version}.war</warArtifactID>
-        <dockerImageTag>pwm/pwm-webapp</dockerImageTag>
         <build.number>3</build.number>
         <build.revision>${git.commit.id.abbrev}</build.revision>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <pwm.minimum.maven.version>3.2</pwm.minimum.maven.version>
+        <warArtifactID>pwm-${project.version}_${build.number}.war</warArtifactID>
+        <dockerImageTag>pwm/pwm-webapp</dockerImageTag>
         <timestamp.iso>${maven.build.timestamp}</timestamp.iso>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <pwm.minimum.maven.version>3.2</pwm.minimum.maven.version>
         <project.root.basedir>${project.basedir}</project.root.basedir>
         <skipTests>false</skipTests>
         <skipSpotbugs>false</skipSpotbugs>
@@ -364,6 +364,18 @@
             <version>1.21</version>
             <scope>test</scope>
         </dependency>
-
+        <!-- Local development and testing -->
+        <!--
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.release.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>sqljdbc4</artifactId>
+            <version>${mssql.release.version}</version>
+        </dependency>
+        -->
     </dependencies>
 </project>
