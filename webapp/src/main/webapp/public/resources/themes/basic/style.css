@@ -37,6 +37,11 @@ body {
     box-sizing: content-box;
 }
 
+label {
+    display: block;
+    margin-bottom: 0;
+}
+
 .row {
     width: 100%;
     flex-wrap: inherit;
@@ -78,18 +83,22 @@ h2 {
     -webkit-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .25);
     -moz-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .25);
     box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .25);
-    margin-top: -10px;
+    margin-top: 0;
     border-width: 5px;
     border-color: #bfbbb7;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
-    border-radius: 5px;
-    padding-bottom: 5px;
-    padding-top: 25px;
+    border-radius: 0 0 5px 5px;
+    padding: 15px 5px 15px 5px;
 }
 
 #centerbody #recovery {
     margin-left: 15px;
+}
+
+#centerbody #recovery .menubutton-description p {
+    margin: 5px 2px;
+    padding: 4px 4px;
 }
 
 #centerbody .row .col-sm-8 p {
@@ -111,15 +120,14 @@ h2 {
     background-image: url('gradient.png');
     background-repeat:repeat-x;
     width: 550px;
-    height: 55px;
+    height: 60px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
 }
 
 #header-center {
-    padding: 4px;
+    padding: 0;
     width: 550px;
     position: initial;
 }
@@ -220,6 +228,7 @@ h2 {
 .tab-container > .label {
     font-size: 14px;
     padding: 5px 5px;
+    margin-left: 2px;
 }
 
 .btn {
