@@ -1,6 +1,6 @@
 # PWM
 
-[![Build Status](https://travis-ci.org/bshp/pwm.svg?branch=master)](https://travis-ci.org/bshp/pwm)
+[![Build Status](https://travis-ci.org/bshp/pwm.svg?branch=bshp%2Fmaster)](https://travis-ci.org/bshp/pwm)
 
 - This version has been customized for BSHP, no icons for shortcuts, back to tables in main menu.
 - Tested and built locally with Jdk 1.8.0_144, check Travis CI for version information.
