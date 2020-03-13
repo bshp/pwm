@@ -13,7 +13,7 @@ body {
     color: #444;
 }
 
-#main {
+#wrapper {
     position: relative;
     width: auto;
     min-width: 320px;
@@ -32,7 +32,7 @@ body {
     padding-bottom: 5px;
 }
 
-#logo{
+#header-company-logo {
     background-image:url('shpMobileLogo.png');
     background-repeat: no-repeat;
     width: auto;
@@ -50,7 +50,7 @@ body {
     background-position: 2%;
 }
 
-#main h1 {
+#wrapper h1 {
     color: #114477;
     font-size: 25px;
     margin-top: 15px;
@@ -60,7 +60,7 @@ body {
     height: 31px;
 }
 
-#main form {
+#wrapper form {
     height: auto;
 }
 
@@ -69,7 +69,7 @@ body {
     width: 220px;
 }
 
-#main h2 {
+#wrapper h2 {
     margin-bottom: 0px;
     margin-top: 0px;
     color: #FFF;
@@ -159,49 +159,6 @@ a:hover {
 
 #recovery {
     display: none;
-}
-
-label {
-    font-weight: 500;
-}
-
-#notice-icon {
-    display: none;
-}
-
-#notice {
-    border-top-style: solid;
-    border-top-width: thin;
-    border-top-color: #D3D0CD;
-    /* margin-top: 20px; */
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
-}
-
-#notice p {
-    text-shadow: 0px 1px 0px #fff;
-    padding-top: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-#notice p strong {
-    color: #003366;
-}
-
-#powered-by {
-    display: none;
-}
-
-#powered-by p {
-    text-shadow: 0px 1px 0px #fff;
-    padding-left: 47px;
-    padding-right: 20px;
-}
-
-#powered-by p strong {
-    color: #003366;
 }
 
 #spacer{
