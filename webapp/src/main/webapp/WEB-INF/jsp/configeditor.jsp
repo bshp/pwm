@@ -38,7 +38,7 @@
 </style>
 <div id="wrapper">
 
-    <div class="configeditor-header" id="header" >
+    <div class="configeditor-header" id="configeditor-header" >
         <div id="header-center-wide" style="min-width: 850px">
             <div id="header-title">
                 <span id="currentPageDisplay"></span>

@@ -390,8 +390,13 @@ input:invalid{
 }
 
 .configeditor-header {
-    height: 25px !important;
-    position: fixed !important;
+    width: 870px;
+    background-image: url(header-gradient.gif);
+    background: linear-gradient(to bottom, #3e374c, #08070f);
+    z-index: 5;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .settingSearchPanelTable {
