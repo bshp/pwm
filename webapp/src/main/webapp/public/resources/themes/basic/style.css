@@ -27,7 +27,7 @@ html {
 
 body {
     background-color: transparent;
-    font-family: Ubuntu, Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
     color: #444;
     padding-top:25px;
@@ -90,6 +90,11 @@ h2 {
 
 #centerbody #recovery {
     margin-left: 15px;
+}
+
+#centerbody .row .col-sm-8 p {
+    margin: 5px 2px;
+    padding: 4px 4px;
 }
 
 #recovery .menubutton {
@@ -210,6 +215,11 @@ h2 {
 
 .menubutton:hover {
     background: #393d3e;
+}
+
+.tab-container > .label {
+    font-size: 14px;
+    padding: 5px 5px;
 }
 
 .btn {
