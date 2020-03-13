@@ -46,12 +46,13 @@
       data-url-context="<pwm:context/>"
       data-pwmFormID="<pwm:FormID/>"
       data-clientEtag="<pwm:value name="<%=PwmValue.clientETag%>"/>">
-<meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable=no"/>
-<meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8; IE=7" />
+<meta name="viewport" content="width = device-width, initial-scale = 1, shrink-to-fit = no"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge; IE=11" />
 <link rel="icon" type="image/png" href="<pwm:url url='/public/resources/favicon.png' addContext="true"/>"/>
 <link rel="stylesheet" type="text/css" href="<pwm:url url='/public/resources/pwm-icons.css' addContext="true"/>"/>
 <link rel="stylesheet" type="text/css" href="<pwm:url url='/public/resources/bootstrap.min.css' addContext="true"/>" media="screen"/>
-<link rel="stylesheet" type="text/css" href="<pwm:url url='/public/resources/style.css' addContext="true"/>" media="screen"/>
+<link rel="stylesheet" type="text/css" href="<pwm:url url='/public/resources/mobileStyle.css' addContext="true"/>" media="all and (min-width: 1px) and (max-width: 550px)" />
+<link rel="stylesheet" type="text/css" href="<pwm:url url='/public/resources/style.css' addContext="true"/>" media="all and (min-width: 550px)" />
 <link rel="stylesheet" type="text/css" href="<pwm:url url='/public/resources/style-print.css' addContext="true"/>" media="print"/>
 <link rel="stylesheet" type="text/css" href="<pwm:url url="%THEME_URL%"/>" media="screen"/>
 
