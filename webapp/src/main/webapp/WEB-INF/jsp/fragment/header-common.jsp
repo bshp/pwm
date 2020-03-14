@@ -48,7 +48,7 @@
       data-clientEtag="<pwm:value name="<%=PwmValue.clientETag%>"/>">
 <meta name="viewport" content="width = device-width, initial-scale = 1, shrink-to-fit = no"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge; IE=11" />
-<link rel="icon" type="image/png" href="<pwm:url url='/public/resources/favicon.png' addContext="true"/>"/>
+<link rel="icon" type="image/x-icon" href="<pwm:url url='/public/resources/themes/basic/favicon.ico' addContext="true"/>"/>
 <link rel="stylesheet" type="text/css" href="<pwm:url url='/public/resources/pwm-icons.css' addContext="true"/>"/>
 <link rel="stylesheet" type="text/css" href="<pwm:url url='/public/resources/bootstrap.min.css' addContext="true"/>" media="screen"/>
 <link rel="stylesheet" type="text/css" href="<pwm:url url='/public/resources/style.css' addContext="true"/>" media="screen" />
