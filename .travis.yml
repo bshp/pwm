@@ -19,7 +19,7 @@ before_install:
   - export MAVEN_OPTS='-Xmx2g'
   - sudo apt-get install -y mono-devel
 
-script: mvn clean package -P skip-checkstyle -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
+script: mvn clean package -P skip-checkstyle -Dpwm.data=/opt/pwm/policy -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
 
 jdk:
   - oraclejdk8
