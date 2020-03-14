@@ -51,7 +51,7 @@
 <link rel="icon" type="image/png" href="<pwm:url url='/public/resources/favicon.png' addContext="true"/>"/>
 <link rel="stylesheet" type="text/css" href="<pwm:url url='/public/resources/pwm-icons.css' addContext="true"/>"/>
 <link rel="stylesheet" type="text/css" href="<pwm:url url='/public/resources/bootstrap.min.css' addContext="true"/>" media="screen"/>
-<link rel="stylesheet" type="text/css" href="<pwm:url url='/public/resources/style.css' addContext="true"/>" media="all and (min-width: 550px)" />
+<link rel="stylesheet" type="text/css" href="<pwm:url url='/public/resources/style.css' addContext="true"/>" media="screen" />
 <link rel="stylesheet" type="text/css" href="<pwm:url url='/public/resources/style-print.css' addContext="true"/>" media="print"/>
 <link rel="stylesheet" type="text/css" href="<pwm:url url="%THEME_URL%"/>" media="screen"/>
 
@@ -67,7 +67,7 @@
 <link rel="stylesheet" type="text/css" href="<pwm:url url='/public/resources/webjars/dijit/themes/nihilo/nihilo.css' addContext="true"/>" />
 <link rel="stylesheet" type="text/css" href="<pwm:url url='/public/resources/webjars/dgrid/css/dgrid.css' addContext="true"/>" />
 <pwm:if test="<%=PwmIfTest.requestFlag%>" requestFlag="<%=PwmRequestFlag.INCLUDE_CONFIG_CSS%>">
-    <link rel="stylesheet" type="text/css" href="<pwm:url url='/public/resources/configStyle.css' addContext="true"/>" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="<pwm:url url='/public/resources/themes/basic/configStyle.css' addContext="true"/>" media="screen"/>
 </pwm:if>
 <pwm:script>
     <script type="text/javascript">
