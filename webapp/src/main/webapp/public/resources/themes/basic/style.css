@@ -210,14 +210,13 @@ h2 {
 
 .menubutton {
     display: block;
-    text-align: center;
-    padding: 4px 4px;
-    border-radius: 5px;
-    border: 1px solid black;
-    margin: 5px 2px;
-    text-decoration: none;
     color: white !important;
-    background: #777777;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 5px;
+    border-radius: 5px;
+    margin: 5px 2px;
+    background: #6b6b6b;
     box-shadow: 2px 2px 5px #aaaaaa;
 }
 
