@@ -39,29 +39,39 @@
 <pwm:if test="<%=PwmIfTest.authenticated%>"><title><pwm:display key="Title_TitleBarAuthenticated"/></title></pwm:if>
 <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
 <meta name="robots" content="noindex,nofollow"/>
-<meta id="application-info" name="application-name" content="<%=PwmConstants.PWM_APP_NAME%> Password Self Service"
-      <pwm:if test="<%=PwmIfTest.showVersionHeader%>">data-<%=PwmConstants.PWM_APP_NAME.toLowerCase()%>-version="<%=PwmConstants.BUILD_VERSION%>" data-<%=PwmConstants.PWM_APP_NAME.toLowerCase()%>-build="<%=PwmConstants.BUILD_NUMBER%>"</pwm:if>
+<meta id="application-info" name="application-name" content="<%=PwmConstants.PWM_APP_NAME%> Password Manager"
+    <pwm:if test="<%=PwmIfTest.showVersionHeader%>">
+        data-<%=PwmConstants.PWM_APP_NAME.toLowerCase()%>-version="<%=PwmConstants.BUILD_VERSION%>"
+        data-<%=PwmConstants.PWM_APP_NAME.toLowerCase()%>-build="<%=PwmConstants.BUILD_NUMBER%>"
+    </pwm:if>
       data-<%=PwmConstants.PWM_APP_NAME.toLowerCase()%>-instance="<pwm:value name="<%=PwmValue.instanceID%>"/>"
       data-session-id="<pwm:value name="<%=PwmValue.sessionID%>"/>"
       data-jsp-name="<pwm:value name="<%=PwmValue.currentJspFilename%>"/>"
       data-url-context="<pwm:context/>"
       data-pwmFormID="<pwm:FormID/>"
       data-clientEtag="<pwm:value name="<%=PwmValue.clientETag%>"/>">
-<meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable=no"/>
-<meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8; IE=7" />
-<link rel="icon" type="image/png" href="<pwm:url url='/public/resources/favicon.png' addContext="true"/>"/>
+<meta name="viewport" content="width = device-width, initial-scale = 1, shrink-to-fit = no"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge; IE=11" />
+<link rel="icon" type="image/x-icon" href="<pwm:url url='/public/resources/themes/basic/favicon.ico' addContext="true"/>"/>
 <link rel="stylesheet" type="text/css" href="<pwm:url url='/public/resources/pwm-icons.css' addContext="true"/>"/>
-<link href="<pwm:url url='/public/resources/style.css' addContext="true"/>" rel="stylesheet" type="text/css" media="screen"/>
-<link href="<pwm:url url='/public/resources/style-print.css' addContext="true"/>" rel="stylesheet" type="text/css" media="print"/>
-<link href="<pwm:url url="%THEME_URL%"/>" rel="stylesheet" type="text/css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="<pwm:url url='/public/resources/bootstrap.min.css' addContext="true"/>" media="screen"/>
+<link rel="stylesheet" type="text/css" href="<pwm:url url='/public/resources/style.css' addContext="true"/>" media="screen" />
+<link rel="stylesheet" type="text/css" href="<pwm:url url='/public/resources/style-print.css' addContext="true"/>" media="print"/>
+<link rel="stylesheet" type="text/css" href="<pwm:url url="%THEME_URL%"/>" media="screen"/>
+
+<%--
 <pwm:if test="<%=PwmIfTest.requestFlag%>" requestFlag="<%=PwmRequestFlag.NO_MOBILE_CSS%>" negate="true">
-    <link media="only screen and (max-width: 600px)" href="<pwm:url url='/public/resources/mobileStyle.css' addContext="true"/>" type="text/css" rel="stylesheet"/><%-- iphone css --%>
-    <link media="only screen and (max-width: 600px)" href="<pwm:url url="%MOBILE_THEME_URL%"/>" type="text/css" rel="stylesheet"/><%-- mobile css --%>
+    <!--
+    <link media="only screen and (max-width: 600px)" href="<pwm:url url='/public/resources/mobileStyle.css' addContext="true"/>" type="text/css" rel="stylesheet"/>
+    <link media="only screen and (max-width: 600px)" href="<pwm:url url="%MOBILE_THEME_URL%"/>" type="text/css" rel="stylesheet"/>
+    -->
 </pwm:if>
-<link href="<pwm:url url='/public/resources/webjars/dijit/themes/nihilo/nihilo.css' addContext="true"/>" rel="stylesheet" type="text/css"/>
-<link href="<pwm:url url='/public/resources/webjars/dgrid/css/dgrid.css' addContext="true"/>" rel="stylesheet" type="text/css"/>
+--%>
+
+<link rel="stylesheet" type="text/css" href="<pwm:url url='/public/resources/webjars/dijit/themes/nihilo/nihilo.css' addContext="true"/>" />
+<link rel="stylesheet" type="text/css" href="<pwm:url url='/public/resources/webjars/dgrid/css/dgrid.css' addContext="true"/>" />
 <pwm:if test="<%=PwmIfTest.requestFlag%>" requestFlag="<%=PwmRequestFlag.INCLUDE_CONFIG_CSS%>">
-    <link href="<pwm:url url='<%=PwmThemeURL.CONFIG_THEME_URL.token()%>' addContext="true"/>" rel="stylesheet" type="text/css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="<pwm:url url='/public/resources/themes/basic/configStyle.css' addContext="true"/>" media="screen"/>
 </pwm:if>
 <pwm:script>
     <script type="text/javascript">

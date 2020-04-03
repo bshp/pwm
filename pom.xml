@@ -22,20 +22,22 @@
         <url>http://www.pwm-project.org</url>
     </organization>
 
+    <scm>
+        <connection>https://github.com/bshp/pwm.git</connection>
+        <developerConnection>git@github.com:bshp/pwm.git</developerConnection>
+        <url>https://github.com/bshp/pwm</url>
+    </scm>
+
     <properties>
+        <build.number>3</build.number>
+        <build.revision>${git.commit.id.abbrev}</build.revision>
         <warArtifactID>pwm-${project.version}.war</warArtifactID>
         <dockerImageTag>pwm/pwm-webapp</dockerImageTag>
-
-        <build.number>0</build.number>  <!-- default in case not set on command line -->
-        <build.revision>0</build.revision>  <!-- default in case not set on command line -->
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-        <pwm.minimum.maven.version>3.2</pwm.minimum.maven.version>
         <timestamp.iso>${maven.build.timestamp}</timestamp.iso>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.javadoc.skip>true</maven.javadoc.skip>
-
         <skipTests>false</skipTests>
 
         <!-- git.commit.time is populated via git-commit-id-plugin and results in a (hopefully) reproducible maven build -->
@@ -359,6 +361,24 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin> <!-- use git revision as build number -->
+                <groupId>pl.project13.maven</groupId>
+                <artifactId>git-commit-id-plugin</artifactId>
+                <version>3.0.0</version>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>revision</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <dateFormat>yyyyMMdd-HHmmss</dateFormat>
+                    <dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
+                    <generateGitPropertiesFile>false</generateGitPropertiesFile>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
@@ -375,6 +395,11 @@
             <artifactId>spotbugs-annotations</artifactId>
             <version>4.0.0</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet.jsp.jstl</groupId>
+            <artifactId>jstl-api</artifactId>
+            <version>1.2</version>
         </dependency>
 
         <!-- Test dependencies -->
@@ -420,6 +445,18 @@
             <version>1.23</version>
             <scope>test</scope>
         </dependency>
-
+        <!-- Local development and testing -->
+        <!--
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.release.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>sqljdbc4</artifactId>
+            <version>${mssql.release.version}</version>
+        </dependency>
+        -->
     </dependencies>
 </project>

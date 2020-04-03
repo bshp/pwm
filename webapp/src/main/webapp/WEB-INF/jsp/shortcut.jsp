@@ -48,25 +48,26 @@
     <jsp:include page="fragment/header-body.jsp">
         <jsp:param name="pwm.PageName" value="Title_Shortcuts"/>
     </jsp:include>
-    <div id="centerbody" class="tile-centerbody">
-        <h1 id="page-content-title"><pwm:display key="Title_Shortcuts" displayIfMissing="true"/></h1>
-        <% if (shortcutItems.isEmpty()) { %>
-        <p>No shortcuts</p>
-        <% } else { %>
-        <% for (final ShortcutItem item : shortcutItems) { %>
-        <a href="<pwm:current-url/>?processAction=<%=ShortcutServlet.ShortcutAction.selectShortcut%>&link=<%=StringUtil.escapeHtml(item.getLabel())%>&pwmFormID=<pwm:FormID/>" id="form-shortcuts-<%=StringUtil.escapeHtml(item.getLabel())%>" <%=newWindow ? " target=\"_blank\"" : ""%>>
-            <div class="tile">
-                <div class="tile-content">
-                    <div class="tile-image">
-                        <pwm:if test="<%=PwmIfTest.showIcons%>"><span class="btn-icon pwm-icon pwm-icon-external-link"></span></pwm:if>
-                    </div>
-                    <div class="tile-title" title="<%=item.getLabel()%>"><%=item.getLabel()%></div>
-                    <div class="tile-subtitle" title="<%=item.getDescription()%>"><%=item.getDescription()%></div>
-                </div>
-            </div>
-        </a>
-        <% } %>
-        <% } %>
+    <div id="centerbody">
+        <table class="noborder">
+            <h1 id="page-content-title"><pwm:display key="Title_Shortcuts" displayIfMissing="true"/></h1>
+            <% if (shortcutItems.isEmpty()) { %>
+            <p>No shortcuts</p>
+            <% } else { %>
+            <% for (final ShortcutItem item : shortcutItems) { %>
+            <tr>
+                <td class="menubutton_key">
+                    <a id="button_ChangePassword" class="menubutton" href="<pwm:current-url/>?processAction=<%=ShortcutServlet.ShortcutAction.selectShortcut%>&link=<%=StringUtil.escapeHtml(item.getLabel())%>&pwmFormID=<pwm:FormID/>" id="form-shortcuts-<%=StringUtil.escapeHtml(item.getLabel())%>" <%=newWindow ? " target=\"_blank\"" : ""%>>
+                        <%=item.getLabel()%>
+                    </a>
+                </td>
+                <td>
+                    <p><%=item.getDescription()%></p>
+                </td>
+            </tr>
+            <% } %>
+            <% } %>
+        </table>
     </div>
     <div class="push"></div>
 </div>

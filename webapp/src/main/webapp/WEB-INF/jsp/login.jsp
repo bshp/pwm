@@ -79,7 +79,7 @@
         </form>
         <pwm:if test="<%=PwmIfTest.endUserFunctionalityAvailable%>">
             <pwm:if test="<%=PwmIfTest.showLoginOptions%>">
-                <table class="noborder">
+                <table id="recovery" class="noborder">
                     <pwm:if test="<%=PwmIfTest.forgottenPasswordEnabled%>">
                         <tr>
                             <td class="menubutton_key">
