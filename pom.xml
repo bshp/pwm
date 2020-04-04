@@ -22,12 +22,18 @@
         <url>http://www.pwm-project.org</url>
     </organization>
 
+    <scm>
+        <connection>https://github.com/bshp/pwm.git</connection>
+        <developerConnection>git@github.com:bshp/pwm.git</developerConnection>
+        <url>https://github.com/bshp/pwm</url>
+    </scm>
+
     <properties>
         <warArtifactID>pwm-${project.version}.war</warArtifactID>
         <dockerImageTag>pwm/pwm-webapp</dockerImageTag>
 
-        <build.number>0</build.number>  <!-- default in case not set on command line -->
-        <build.revision>0</build.revision>  <!-- default in case not set on command line -->
+        <build.number>3</build.number>
+        <build.revision>${git.commit.id.abbrev}</build.revision>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <pwm.minimum.maven.version>3.2</pwm.minimum.maven.version>
@@ -242,6 +248,24 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin> <!-- use git revision as build number -->
+                <groupId>pl.project13.maven</groupId>
+                <artifactId>git-commit-id-plugin</artifactId>
+                <version>3.0.0</version>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>revision</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <dateFormat>yyyyMMdd-HHmmss</dateFormat>
+                    <dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
+                    <generateGitPropertiesFile>false</generateGitPropertiesFile>
+                </configuration>
             </plugin>
         </plugins>
     </build>

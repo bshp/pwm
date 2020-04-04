@@ -99,6 +99,8 @@
                 <configuration>
                     <archiveClasses>true</archiveClasses>
                     <packagingExcludes>WEB-INF/classes</packagingExcludes>
+                    <webXml>${project.build.directory}/web.xml</webXml>
+                    <filteringDeploymentDescriptors>true</filteringDeploymentDescriptors>
                     <archive>
                         <manifestEntries>
                             <Implementation-Archive-Name>${warArtifactID}</Implementation-Archive-Name>
