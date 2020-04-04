@@ -1,0 +1,22 @@
+sudo: required
+dist: trusty
+language: java
+
+install: true
+cache:
+  directories:
+    - $HOME/.m2
+
+before_install:
+  - sudo apt-get -qq update
+  - wget --no-check-certificate https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.3.9/apache-maven-3.3.9-bin.zip
+  - unzip -qq apache-maven-3.3.9-bin.zip
+  - export M2_HOME=$PWD/apache-maven-3.3.9
+  - export PATH=$M2_HOME/bin:$PATH
+  - export MAVEN_OPTS='-Xmx2g'
+  - sudo apt-get install -y mono-devel
+
+script: mvn clean package -P skip-checkstyle -Dpwm.data=/opt/pwm/policy -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
+
+jdk:
+  - oraclejdk8
